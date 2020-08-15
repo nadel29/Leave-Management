@@ -18,5 +18,8 @@ namespace Leave_Management.Data
         [ForeignKey("LeaveTypeId")]
         public LeaveType LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
+
+        //Period here is the year
+        public int Period { get; set; }
     }
 }

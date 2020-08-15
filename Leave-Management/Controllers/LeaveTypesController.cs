@@ -109,6 +109,7 @@ namespace Leave_Management.Controllers
                     return View(model);
                 }
 
+             
                 var leaveType = _mapper.Map<LeaveType>(model);
                 
                 var isSucceed = _repo.Update(leaveType);
@@ -154,8 +155,7 @@ namespace Leave_Management.Controllers
         public ActionResult Delete(int id, LeaveTypeVM model)
         {
             try
-            {
-                
+            {                
                 var leaveType = _repo.FindById(id);
                 if(leaveType == null)
                 {
